@@ -1,3 +1,51 @@
+window.addEventListener('scroll', reveal = () => {
+    var reveals = document.querySelectorAll('.reveal');
+
+    for (var i = 0; i < reveals.length; i++) {
+
+        var windowHeight = window.innerHeight;
+        var revealTop = reveals[i].getBoundingClientRect().top;
+        var revealPoint = 150;
+
+        if (revealTop < windowHeight - revealPoint) {
+            reveals[i].classList.add('active');
+        }
+        /*  else {
+            reveals[i].classList.remove('active');
+         } */
+    };
+});
+
+
+
+// ! about area function start___________________________________
+
+about.addEventListener('mouseenter', function () {
+    let progressBar = document.querySelectorAll('.progress-bar');
+    let myTime = 300;
+    progressBar.forEach(function (e) {
+        let updateValue = function () {
+            let value = +e.getAttribute('value');
+            let getValue = +e.innerText;
+            let increment = value / myTime;
+            let updateWidth = Math.ceil(getValue + increment);
+
+            if (getValue < value) {
+                e.style.width = updateWidth + '%';
+                e.innerText = updateWidth;
+                setTimeout(updateValue, 10)
+            } else {
+                e.innerText = value + '%';
+            }
+        };
+        updateValue();
+    });
+});
+// * about area function end_____________________________________
+
+
+
+
 // ! Carousel multiSide Function for Bootstrap-5 (start)
 let items = document.querySelectorAll('.clients .carousel .carousel-item')
 
@@ -15,6 +63,10 @@ items.forEach((el) => {
     }
 });
 // * Carousel multiSide Function for Bootstrap-5 (end)
+
+
+
+
 
 
 // ! Counter area function start___________________________
@@ -41,26 +93,3 @@ oslActivity.addEventListener('mouseenter', () => {
 // * Counter area function end_______________________________
 
 
-// ! about area function start___________________________________
-about.addEventListener('mouseover', function () {
-    let progressBar = document.querySelectorAll('.progress-bar');
-    let myTime = 300;
-    progressBar.forEach(function (e) {
-        let updateValue = function () {
-            let value = +e.getAttribute('value');
-            let getValue = +e.innerText;
-            let increment = value / myTime;
-            let updateWidth = Math.ceil(getValue + increment);
-
-            if (getValue < value) {
-                e.style.width = updateWidth + '%';
-                e.innerText = updateWidth;
-                setTimeout(updateValue, 10)
-            } else {
-                e.innerText = value + '%';
-            }
-        };
-        updateValue();
-    });
-});
-// * about area function end_____________________________________
