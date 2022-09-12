@@ -1,0 +1,596 @@
+:root {
+    /* font size__________ */
+    --primary-font: 60px;
+    --topBannerTitle-font: 36px;
+    --title-font: 30px;
+    --subTitle-font: 18px;
+    --secondary-font: 14px;
+    --progressBar-font: 20px;
+
+    /* color__________ */
+    --primary-color: #028fcc;
+    --secondary-color: #fff;
+    --title-color: #333;
+    --subTitle-color: #666;
+    --contact-color: rgba(255, 255, 255, 0.8);
+
+    --transition: all 0.5s ease-in-out;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--subTitle-color);
+    overflow-x: hidden;
+}
+
+.navbar .nav-item:hover,
+.activePage {
+    background: hsla(0, 0%, 40%, 0.500);
+}
+
+.title {
+    font-size: var(--title-font);
+    color: var(--title-color);
+}
+
+.subTitle {
+    max-width: 750px;
+    font-size: var(--subTitle-font);
+    color: var(--subTitle-color);
+    letter-spacing: .5px;
+}
+
+.secondaryFont {
+    font-size: var(--secondary-font);
+    letter-spacing: .5px;
+    font-weight: lighter;
+    line-height: 24px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.bgFixed {
+    padding: 60px 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.carousel-indicators li {
+    width: 12px !important;
+    height: 12px !important;
+}
+
+/* ===========carouselId css start========= */
+#carouselId {
+    overflow-x: hidden;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-40%);
+    z-index: 2;
+}
+
+.carousel-caption h3 {
+    font-size: var(--primary-font);
+}
+
+.carousel-caption p {
+    font-size: var(--subTitle-font);
+}
+
+.carousel-item .carousel-caption button {
+    font-size: var(--secondary-font);
+}
+
+.carousel-item .btn-start:hover,
+#carouselId button:hover {
+    background-color: var(--primary-color);
+}
+
+#carouselId .carousel-control-prev,
+#carouselId .carousel-control-next {
+    height: 50px;
+    width: 50px;
+    margin: 0 -50px;
+    transition: all 0.5s ease-in-out;
+}
+
+#carouselId:hover .carousel-control-prev,
+#carouselId:hover .carousel-control-next {
+    /* visibility: visible; */
+    margin: 0 2%;
+    transition: all 0.5s ease-in-out;
+}
+
+.fa-solid {
+    color: var(--secondary-color);
+}
+
+@media only screen and (max-width: 991px) {
+
+    .carousel-caption h3 {
+        font-size: 40px;
+    }
+
+    .carousel-caption p {
+        font-size: 15px;
+    }
+
+    .carousel-item .carousel-caption button {
+        font-size: 12px;
+    }
+
+    #carouselId .carousel-control-prev,
+    #carouselId .carousel-control-next {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+/* ===========carouselId css end=========== */
+
+
+
+
+
+
+/* ===========Navbar css start============= */
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar .nav-item .nav-link {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 30px 15px;
+}
+
+.navbar .nav-item .dropdown-menu {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar .nav-item .dropdown-item {
+    color: var(--secondary-color);
+    /* text-transform: uppercase; */
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.navbar .nav-item .dropdown-item:hover {
+    color: var(--title-color);
+    background: none;
+}
+
+@media only screen and (max-width: 991px) {
+    .navbar .collapse {
+        border-top: 1px solid rgba(255, 255, 255, 0.381);
+    }
+
+    .navbar .nav-item .nav-link {
+        font-size: 13px;
+        font-weight: 500 !important;
+        padding: 10px;
+    }
+
+    .navbar-toggler-icon {
+        display: inline-block;
+        /* height: 2rem; */
+        width: 1.5rem;
+        vertical-align: middle;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-size: 100%; */
+    }
+
+}
+
+/* ===========Navbar css end============= */
+
+
+
+
+
+/* ===========Service area css start====== */
+.service .card-title {
+    font-size: var(--subTitle-font);
+    color: var(--title-color);
+}
+
+.service .card-text {
+    font-size: var(--secondary-font);
+    color: var(--subTitle-color);
+    line-height: 24px;
+}
+
+.service .card:hover i {
+    background-color: var(--title-color) !important;
+}
+
+
+@media only screen and (max-width: 992px) {
+    .service .card-title {
+        font-size: 20px;
+    }
+
+    .service .card-text {
+        line-height: 24px;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .service .card {
+        --bs-card-spacer-x: 0rem;
+    }
+
+}
+
+/* ===========Service area css end======== */
+
+
+
+
+/* ===========About us area css start====== */
+.about {
+    background-image: url(../img/about.jpg);
+    color: var(--secondary-color);
+}
+
+.about .progress {
+    --bs-progress-height: 40px;
+    font-size: var(--progressBar-font);
+}
+
+/* ===========About us area css end======== */
+
+
+
+
+
+/* ==========Portfolio area css start====== */
+.portfolio .gly_overlay {
+    transform: scale(0);
+    transition: .3s;
+    transition: var(--transition);
+}
+
+.portfolio .gly_overlay h3 {
+    font-size: var(--subTitle-font);
+}
+
+.portfolio .gly_overlay i {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: var(--secondary-font);
+}
+
+.portfolio .gallery .col-12:hover .gly_overlay {
+    transform: scale(1);
+    transition: .3s;
+}
+
+.portfolio .gallery .overlay-content a:hover i {
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+/* ==========Portfolio area css end======== */
+
+
+
+
+/* ==========Clients area css start====== */
+.clientsBanner {
+    background: url(../img/twitter.jpg);
+}
+
+.clients .carousel-item img {
+    width: 200px !important;
+}
+
+/* +++++++++++++++++++++++++++++++++++++ */
+
+@media (max-width: 991px) {
+    .clients .carousel-inner .carousel-item>div {
+        display: none;
+        margin: auto;
+    }
+
+    .clients .carousel-inner .carousel-item>div:first-child {
+        display: block;
+    }
+}
+
+.clients .carousel-inner .carousel-item.active,
+.clients .carousel-inner .carousel-item-next,
+.clients .carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 992px) {
+
+    .clients .carousel-inner .carousel-item-end.active,
+    .clients .carousel-inner .carousel-item-next {
+        transform: translateX(25%);
+    }
+
+    .clients .carousel-inner .carousel-item-start.active,
+    .clients .carousel-inner .carousel-item-prev {
+        transform: translateX(-25%);
+    }
+}
+
+.clients .carousel-inner .carousel-item-end,
+.clients .carousel-inner .carousel-item-start {
+    transform: translateX(0);
+}
+
+/* ==========Clients area css end======== */
+
+
+
+
+
+/* ==========Counter area css start======= */
+.oslActivity .counter {
+    font-size: var(--title-font);
+}
+
+.oslActivity .outline {
+    font-size: var(--secondary-font);
+}
+
+/* ==========Counter area css end======== */
+
+
+
+
+
+/* ==========contact area css start=========== */
+.contact {
+    background-image: url(../img/content.jpg);
+    color: var(--secondary-color);
+
+}
+
+.contact .content {
+    font-size: var(--secondary-font);
+    -webkit-line-clamp: 3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: var(--contact-color);
+}
+
+.contact .form-control {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.contact ul li {
+    list-style-type: none;
+    padding-bottom: 8px;
+}
+
+.contact ul li a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: var(--secondary-font);
+    font-weight: 300;
+}
+
+.contact ul li a:hover {
+    color: var(--primary-color);
+}
+
+/* ==========contact area css end============= */
+
+
+
+
+
+/* ==========footer area css start============ */
+.footer .socialLink li {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.footer .socialLink .link1:hover {
+    background-color: #CDCB27 !important;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+.footer .socialLink .link2:hover {
+    background-color: #028FCC !important;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+.footer .socialLink .link3:hover {
+    background-color: #3B5999 !important;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+.footer .socialLink .link4:hover {
+    background-color: #036DC0 !important;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+.footer .socialLink .link5:hover {
+    background-color: #FE6B01 !important;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+@media only screen and (max-width: 776px) {
+    .footer ul li {
+        height: 30px;
+        width: 30px;
+        line-height: 30px;
+    }
+}
+
+.footer .copyrightArea a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 400;
+    font-size: var(--secondary-font);
+    letter-spacing: .5px;
+}
+
+.footer .copyrightArea a:hover {
+    text-decoration: underline;
+}
+
+/* ==========footer area css end============= */
+
+/*=================================================
+================Index area css end================= 
+================================================= */
+
+
+
+
+
+/*=================================================
+================Product area css start========== 
+================================================= */
+.accountingTitle {
+    font-size: var(--topBannerTitle-font) !important;
+    font-weight: 400;
+}
+
+.content {
+    font-size: var(--progressBar-font) !important;
+    line-height: 24px;
+}
+
+
+/* *common CSS end______________________________ */
+.topBanner button:hover {
+    background-color: var(--primary-color);
+}
+
+.basicFeatures,
+.advantages {
+    background-image: url(../img/accountingSoft.jpg);
+}
+
+.commonApps h3,
+.commonApps .content {
+    color: var(--title-color);
+}
+
+.advantages h3,
+.advantages .content {
+    color: var(--secondary-color);
+}
+
+/* ________________________________________ */
+.basicOperation,
+.customize,
+.supportService,
+.efficiency {
+    background-image: url(../img/OMRbanner.jpg);
+}
+
+.OCbasicOperation,
+.OCefficiency,
+.OCsupportService {
+    background-image: url(../img/ocsBallotBG.jpg);
+}
+
+.commonApps {
+    background-image: url(../img/autoMobileBG.jpg);
+}
+
+/* common css end_______________________________ */
+
+.video-container {
+    width: 100vw;
+    height: 100vh;
+}
+
+
+.video-container iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    .video-container iframe {
+        height: 56.25vw;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .video-container iframe {
+        width: 177.78vh;
+    }
+}
+
+.supportService .content {
+    letter-spacing: .5px;
+}
+
+.supportService .justify {
+    font-size: var(--secondary-font);
+    letter-spacing: .5px;
+}
+
+.clientsFeedback img {
+    width: 300px !important;
+}
+
+.clientsFeedback .justify span {
+    font-size: 40px;
+}
+
+.clientsFeedback .feedbackContent {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: sans-serif;
+}
+
+.clientsFeedback .feedbackContent strong {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.clientsFeedback .feedbackContent::before {
+    content: "❝ ";
+}
+
+.clientsFeedback .feedbackContent strong::before {
+    content: " ❞";
+}
+
+
+/*=================================================
+================Product area css end=============== 
+================================================= */
