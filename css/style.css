@@ -23,8 +23,10 @@ body {
     overflow-x: hidden;
 }
 
+.navbar-nav .active,
 .navbar .nav-item:hover,
-.activePage {
+.navbar-nav .show>.nav-link {
+    color: var(--bs-navbar-active-color);
     background: hsla(0, 0%, 40%, 0.500);
 }
 
@@ -594,3 +596,31 @@ body {
 /*=================================================
 ================Product area css end=============== 
 ================================================= */
+
+
+
+/* !overlap CSS area_______________________ */
+@media only screen and (max-width: 991px) {
+    :root {
+        --title-font: 30px;
+        --subTitle-font: 15px;
+        --secondary-font: 12px !important;
+        --progressBar-font: 20px;
+    }
+
+    .justify {
+        font-size: 16px;
+        font-weight: 200;
+        letter-spacing: .5px;
+    }
+}
+
+.bg-info {
+    background-color: var(--primary-color) !important;
+}
+
+.text-info {
+    color: var(--primary-color) !important;
+}
+
+/* !overlap CSS area_______________________ */
