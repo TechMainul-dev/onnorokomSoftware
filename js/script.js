@@ -13,7 +13,7 @@ window.addEventListener('scroll', reveal = () => {
         /*  else {
             reveals[i].classList.remove('active');
          } */
-    };
+    }
 });
 
 
@@ -33,7 +33,7 @@ about.addEventListener('mouseenter', function () {
             if (getValue < value) {
                 e.style.width = updateWidth + '%';
                 e.innerText = updateWidth;
-                setTimeout(updateValue, 10)
+                setTimeout(updateValue, 10);
             } else {
                 e.innerText = value + '%';
             }
@@ -47,7 +47,7 @@ about.addEventListener('mouseenter', function () {
 
 
 // ! Carousel multiSide Function for Bootstrap-5 (start)
-let items = document.querySelectorAll('.clients .carousel .carousel-item')
+let items = document.querySelectorAll('.clients .carousel .carousel-item');
 
 items.forEach((el) => {
     const minPerSlide = 3;
@@ -55,11 +55,11 @@ items.forEach((el) => {
     for (var i = 0; i < minPerSlide; i++) {
         if (!next) {
             // wrap carousel by using first child
-            next = items[1]
+            next = items[1];
         }
-        let cloneChild = next.cloneNode(true)
-        el.appendChild(cloneChild.children[0])
-        next = next.nextElementSibling
+        let cloneChild = next.cloneNode(true);
+        el.appendChild(cloneChild.children[0]);
+        next = next.nextElementSibling;
     }
 });
 // * Carousel multiSide Function for Bootstrap-5 (end)
