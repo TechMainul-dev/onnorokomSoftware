@@ -22,7 +22,10 @@ body {
     color: var(--subTitle-color);
 }
 
-section, footer {
+#carouselId,
+.oslActivity,
+section,
+footer {
     overflow-x: hidden;
 }
 
@@ -70,9 +73,6 @@ section, footer {
 }
 
 /* ===========carouselId css start========= */
-#carouselId {
-    overflow-x: hidden;
-}
 
 .carousel-caption {
     top: 50%;
@@ -553,12 +553,6 @@ section, footer {
     }
 }
 
-@media (max-aspect-ratio: 16/9) {
-    .video-container iframe {
-        width: 177.78vh;
-    }
-}
-
 .supportService .content {
     letter-spacing: .5px;
 }
@@ -615,6 +609,10 @@ section, footer {
         font-size: 16px;
         font-weight: 200;
         letter-spacing: .5px;
+    }
+
+    .contact ul li a {
+        font-size: var(--subTitle-font);
     }
 }
 
