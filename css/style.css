@@ -492,7 +492,7 @@ section {
 
 
 /* *common CSS end______________________________ */
-.topBanner button:hover {
+.topBanner .btn:hover {
     background-color: var(--primary-color);
 }
 
