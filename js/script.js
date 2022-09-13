@@ -25,7 +25,7 @@ about.addEventListener('mouseenter', function () {
     let myTime = 300;
     progressBar.forEach(function (e) {
         let updateValue = function () {
-            let value = +e.getAttribute('value');
+            let value = +e.getAttribute('aria-valuenow');
             let getValue = +e.innerText;
             let increment = value / myTime;
             let updateWidth = Math.ceil(getValue + increment);
