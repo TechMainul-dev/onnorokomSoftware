@@ -16,7 +16,23 @@ window.addEventListener('scroll', reveal = () => {
     }
 });
 
+// ! Carousel multiSide Function for Bootstrap-5 (start)
+let items = document.querySelectorAll('.clients .carousel .carousel-item');
 
+items.forEach((el) => {
+    const minPerSlide = 3;
+    let next = el.nextElementSibling;
+    for (var i = 0; i < minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+            next = items[1];
+        }
+        let cloneChild = next.cloneNode(true);
+        el.appendChild(cloneChild.children[0]);
+        next = next.nextElementSibling;
+    }
+});
+// * Carousel multiSide Function for Bootstrap-5 (end)
 
 // ! about area function start___________________________________
 
@@ -42,32 +58,6 @@ about.addEventListener('mouseenter', function () {
     });
 });
 // * about area function end_____________________________________
-
-
-
-
-// ! Carousel multiSide Function for Bootstrap-5 (start)
-let items = document.querySelectorAll('.clients .carousel .carousel-item');
-
-items.forEach((el) => {
-    const minPerSlide = 3;
-    let next = el.nextElementSibling;
-    for (var i = 0; i < minPerSlide; i++) {
-        if (!next) {
-            // wrap carousel by using first child
-            next = items[1];
-        }
-        let cloneChild = next.cloneNode(true);
-        el.appendChild(cloneChild.children[0]);
-        next = next.nextElementSibling;
-    }
-});
-// * Carousel multiSide Function for Bootstrap-5 (end)
-
-
-
-
-
 
 // ! Counter area function start___________________________
 

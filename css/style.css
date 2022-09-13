@@ -22,7 +22,7 @@ body {
     color: var(--subTitle-color);
 }
 
-section {
+section, footer {
     overflow-x: hidden;
 }
 
@@ -627,7 +627,6 @@ section {
 }
 
 .reveal {
-    /* position: relative; */
     transform: translateY(150px);
     opacity: 0;
     transition: all 2s ease;
