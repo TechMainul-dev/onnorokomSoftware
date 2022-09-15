@@ -61,7 +61,8 @@ about.addEventListener('mouseenter', function () {
 
 // ! Counter area function start___________________________
 
-oslActivity.addEventListener('mouseenter', () => {
+let oslActivity = document.getElementById('oslActivity');
+oslActivity.addEventListener('wheel', () => {
     let counters = document.querySelectorAll('.counter');
     let time = 200;
     counters.forEach(counter => {
@@ -81,5 +82,4 @@ oslActivity.addEventListener('mouseenter', () => {
     });
 });
 // * Counter area function end_______________________________
-
 
